@@ -26,3 +26,19 @@ body
         animation: rightToLeft 1.7s 1s ease
         backface-visibility: hidden
         margin-bottom: 5rem
+
+.title-secondary
+    text-align: center
+    display: inline-block
+    font-size: 3.6rem
+    letter-spacing: 1rem
+    text-transform: uppercase
+    font-weight: 800
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.70) 0%, rgba($color-brown-dark, 0.70) 100%)
+    -webkit-background-clip: text
+    color: transparent
+    transition: all .4s ease 0s
+    backface-visibility: hidden
+    &:hover
+        transform: skewY(2deg) skewX(15deg) scale(1.1)
+        text-shadow: $shadow-h2
