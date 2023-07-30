@@ -1,0 +1,65 @@
+.card-tour
+    height: 50rem
+    perspective: 150rem
+    -moz-perspective: 150rem
+    position: relative
+    &__side
+        height: 50rem
+        transition: all .7s ease-out 0s
+        color: white
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        backface-visibility: hidden
+        box-shadow: $box-shadow
+        &_front
+            
+        &_back
+            background: linear-gradient(120deg, rgba($color-brown-light, 0.70) 0.03%, rgba($color-brown-dark, 0.70) 99.94%)
+            transform: rotateY(180deg)
+    &:hover &__side_front
+        transform: rotateY(-180deg)
+    &:hover &__side_back
+        transform: rotateY(0deg)
+        
+    &__img
+        background-blend-mode: hard-light
+        height: 21rem
+        background: $color-brown-light url(../img/card-1.jpg) center/cover no-repeat
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+    &__title
+        font-size: 2.8rem
+        letter-spacing: .2rem
+        font-weight: 300
+        text-transform: uppercase
+        text-align: right
+        position: absolute
+        top: 17rem
+        right: 0
+    &__span
+        background: linear-gradient(90deg, $color-brown-light, $color-brown-dark)
+        padding: 1rem 2rem .3rem 
+        &_1
+        
+        &_2
+            position: absolute
+            top: 3.4rem
+            right: 0
+            padding-bottom: 1rem 
+            padding-top: 0 
+    &__descr
+        ul
+            list-style: none
+            margin: 0 auto
+            width: 75%
+            li
+                font-size: $font-size-paragraph
+                letter-spacing: .2rem
+                color: $color-gray
+                border-bottom: 1px solid $color-gray
+                text-align: center
+                &:not(:last-child)
+                    margin-bottom: 2rem
+                
+

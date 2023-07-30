@@ -253,6 +253,77 @@ body {
   display: inline-block;
 }
 
+.card-tour {
+  height: 50rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+}
+.card-tour__side {
+  height: 50rem;
+  transition: all 0.7s ease-out 0s;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.1);
+}
+.card-tour__side_back {
+  background: linear-gradient(120deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+  transform: rotateY(180deg);
+}
+.card-tour:hover .card-tour__side_front {
+  transform: rotateY(-180deg);
+}
+.card-tour:hover .card-tour__side_back {
+  transform: rotateY(0deg);
+}
+.card-tour__img {
+  background-blend-mode: hard-light;
+  height: 21rem;
+  background: #BA8554 url(../img/card-1.jpg) center/cover no-repeat;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+.card-tour__title {
+  font-size: 2.8rem;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  position: absolute;
+  top: 17rem;
+  right: 0;
+}
+.card-tour__span {
+  background: linear-gradient(90deg, #BA8554, #A14F03);
+  padding: 1rem 2rem 0.3rem;
+}
+.card-tour__span_2 {
+  position: absolute;
+  top: 3.4rem;
+  right: 0;
+  padding-bottom: 1rem;
+  padding-top: 0;
+}
+.card-tour__descr ul {
+  list-style: none;
+  margin: 0 auto;
+  width: 75%;
+}
+.card-tour__descr ul li {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  color: #777777;
+  border-bottom: 1px solid #777777;
+  text-align: center;
+}
+.card-tour__descr ul li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -331,4 +402,8 @@ body {
 }
 .section-adventure > * {
   transform: skewY(-7deg);
+}
+
+.section-tour {
+  padding-top: 21rem;
 }/*# sourceMappingURL=style.css.map */
