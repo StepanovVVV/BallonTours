@@ -10,7 +10,8 @@
         display: inline-block
         &:not(:last-child)
             margin-right: 5rem
-            
+        @include respond(tab-land)
+            margin-right: 1.6rem
     &__link
         &:link, &:visited
             color: $color-gray

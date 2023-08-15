@@ -10,6 +10,9 @@
         font-size: $font-size-paragraph-h3
         border: none
         cursor: pointer
+        @include respond(tab-land)
+            font-size: 1.8rem 
+            padding: 1.5rem 3.7rem
     &:hover
         transform: translateY(-.4rem)
         box-shadow: $box-shadow
